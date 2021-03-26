@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: cubetiq/starter-docker-actions@v0.1
+      - uses: cubetiq/starter-docker-actions@v0.2
       - name: Starter Docker Test
         run: |
           docker images
