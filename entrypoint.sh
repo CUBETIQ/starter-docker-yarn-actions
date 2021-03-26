@@ -11,7 +11,7 @@ then INPUT_OPTIONS="$INPUT_OPTIONS --network $INPUT_DOCKER_NETWORK"
 fi
 
 if [ -z $INPUT_SHELL ];
-then INPUT_SHELL=bash
+then INPUT_SHELL=sh
 fi
 
 if [ -z $INPUT_IMAGE ];
