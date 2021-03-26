@@ -18,4 +18,4 @@ if [ -z $semicolon_delimited_script ];
 then semicolon_delimited_script="echo $(whoami)"
 fi
 
-exec docker run -v "/var/run/docker.sock":"/var/run/docker.sock" $INPUT_OPTIONS $INPUT_IMAGE $INPUT_SHELL -c "`cat semicolon_delimited_script`"
+exec docker run -v "/var/run/docker.sock":"/var/run/docker.sock" $INPUT_OPTIONS $INPUT_SHELL -c "`cat semicolon_delimited_script`" $INPUT_IMAGE
