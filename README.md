@@ -1,22 +1,25 @@
 # Starter Docker - GitHub Actions
+
 - Run actions with docker (latest version)
 - Quick and easy to use
 - Support custom registry
 - Support custom shell and commands
 
 # Usage
+
 ```yaml
 - name: Starter Docker
   uses: CUBETIQ/starter-docker-actions@v0.2
 ```
 
 # Example Action
+
 ```yaml
 name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
@@ -32,4 +35,5 @@ jobs:
 ```
 
 # Contributors
+
 - Sambo Chea <sombochea@cubetiqs.com>
