@@ -10,7 +10,6 @@ jobs:
 
     steps:
       - name: Starter Docker Test
-        uses: cubetiq/starter-docker-actions@v0.9
+        uses: cubetiq/starter-docker-actions@v1
         with:
-          shell: sh
           run: docker version

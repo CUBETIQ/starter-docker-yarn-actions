@@ -18,9 +18,6 @@ if [ -z $INPUT_IMAGE ];
 then INPUT_IMAGE=docker
 fi
 
-echo "Shell: $INPUT_SHELL"
-echo "Image: $INPUT_IMAGE"
-
 if [ -z $semicolon_delimited_script ];
 then semicolon_delimited_script="echo $(whoami)"
 fi
