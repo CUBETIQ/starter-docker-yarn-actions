@@ -1,5 +1,7 @@
 name: 'Starter Docker'
 description: 'Starter Docker GitHub Action for CUBETIQ and docker environment.'
+color: 'yellow'
+icon: 'box'
 inputs:
   image:
     description: 'Docker image name'
