@@ -9,7 +9,7 @@
 
 ```yaml
 - name: Starter Docker
-  uses: CUBETIQ/starter-docker-actions@v0.4
+  uses: CUBETIQ/starter-docker-actions@v0.5
 ```
 
 # Example Action
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: cubetiq/starter-docker-actions@v0.4
+      - uses: cubetiq/starter-docker-actions@v0.5
       - name: Starter Docker Test
         run: |
           docker images
