@@ -2,16 +2,15 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: cubetiq/starter-docker-actions@v0.3
+      - uses: cubetiq/starter-docker-actions@v0.4
       - name: Starter Docker Test
-        run: |
-          docker images
-          docker ps
-          docker --version
+        with:
+          shell: bash
+          run: docker version

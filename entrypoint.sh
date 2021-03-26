@@ -6,6 +6,8 @@ fi
 
 echo "$INPUT_RUN" | sed -e 's/\\n/;/g' > semicolon_delimited_script
 
+echo "INPUT RUN => $semicolon_delimited_script"
+
 if [ ! -z $INPUT_DOCKER_NETWORK ];
 then INPUT_OPTIONS="$INPUT_OPTIONS --network $INPUT_DOCKER_NETWORK"
 fi
