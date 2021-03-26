@@ -1,0 +1,10 @@
+name: 'Starter Docker'
+description: 'Starter Docker Github Action for build the image and docker runtime.'
+inputs:
+  id:
+outputs:
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.id }}
