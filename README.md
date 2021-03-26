@@ -29,7 +29,7 @@ jobs:
       - name: Starter Docker Test
         uses: cubetiq/starter-docker-actions@v1
         with:
-          shell: bash
+          shell: sh
           run: docker version
 ```
 
