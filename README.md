@@ -31,7 +31,7 @@ jobs:
         uses: cubetiq/starter-docker-yarn-actions@main
         with:
           shell: sh
-          run: docker version; node --version; npm --version; npx --version; yarn --version
+          run: docker version; node --version; yarn --version
 ```
 
 # Contributors
