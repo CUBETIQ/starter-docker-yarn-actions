@@ -2,7 +2,7 @@ FROM cubetiq/calpine-docker:latest
 LABEL maintainer="sombochea@cubetiqs.com"
 
 # Build with root access
-USER root
+# USER root
 
 ENV NODE_VERSION 14.16.0
 ENV USER_UID 1001
@@ -71,7 +71,6 @@ RUN addgroup -g ${USER_UID} node \
   fi \
   && rm -f "node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz" \
   && apk del .build-deps \
-  # smoke tests
   && node --version \
   && npm --version
 
