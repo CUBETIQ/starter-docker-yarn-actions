@@ -1,13 +1,5 @@
 #!/bin/sh
 
-set -e
-
-# if [ "${1#-}" != "${1}" ] || [ -z "$(command -v "${1}")" ]; then
-#   set -- node "$@"
-# fi
-
-# exec "$@"
-
 if [ ! -z $INPUT_USERNAME ];
 then echo $INPUT_PASSWORD | docker login $INPUT_REGISTRY -u $INPUT_USERNAME --password-stdin
 fi
@@ -23,7 +15,7 @@ then INPUT_SHELL=sh
 fi
 
 if [ -z $INPUT_IMAGE ];
-then INPUT_IMAGE=docker
+then INPUT_IMAGE=calpine-docker
 fi
 
 if [ -z $semicolon_delimited_script ];
