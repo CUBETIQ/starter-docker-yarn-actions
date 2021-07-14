@@ -2,14 +2,19 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Starter Docker Test
-        uses: cubetiq/starter-docker-actions@v1
+      - name: Starter Docker Yarn Test
+        uses: cubetiq/starter-docker-yarn-actions@master
         with:
-          run: docker version
+          run: |
+          docker version
+          node --version
+          npm --version
+          npx --version
+          yarn --version

@@ -1,15 +1,16 @@
-# Starter Docker - GitHub Actions
+# Starter Docker Yarn - GitHub Actions
 
 - Run actions with docker (latest version)
 - Quick and easy to use
 - Support custom registry
 - Support custom shell and commands
+- Support Nodejs and Yarn
 
 # Usage
 
 ```yaml
-- name: Starter Docker
-  uses: CUBETIQ/starter-docker-actions@v1
+- name: Starter Docker Yarn
+  uses: CUBETIQ/starter-docker-yarn-actions@master
 ```
 
 # Example Action
@@ -19,18 +20,23 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Starter Docker Test
-        uses: cubetiq/starter-docker-actions@v1
+      - name: Starter Docker Yarn Test
+        uses: cubetiq/starter-docker-yarn-actions@master
         with:
           shell: sh
-          run: docker version
+          run: |
+            docker version
+            node --version
+            npm --version
+            npx --version
+            yarn --version
 ```
 
 # Contributors

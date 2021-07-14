@@ -1,5 +1,5 @@
-name: 'Starter Docker'
-description: 'Starter Docker GitHub Action for CUBETIQ and docker environment.'
+name: 'Starter Docker Yarn'
+description: 'Starter Docker Yarn GitHub Action for CUBETIQ with docker and yarn environment.'
 inputs:
   image:
     description: 'Docker image name'
