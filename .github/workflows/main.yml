@@ -12,4 +12,4 @@ jobs:
       - name: Starter Docker Yarn Test
         uses: cubetiq/starter-docker-yarn-actions@main
         with:
-          run: docker version
+          run: docker version; node --version; npm --version; npx --version; yarn --version
