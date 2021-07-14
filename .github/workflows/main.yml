@@ -9,7 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Starter Docker Yarn Test
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+        
+      - 
+        name: Starter Docker Yarn Test
         uses: cubetiq/starter-docker-yarn-actions@main
         with:
-          run: docker version; echo Node: $(node --version); echo Yarn: $(yarn --version)
+          run: docker version; echo Node":" $(node --version); echo Yarn":" $(yarn --version)
