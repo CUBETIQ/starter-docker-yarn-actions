@@ -1,5 +1,9 @@
 #!/bin/sh
 
+#### Current working directory is: /github/workspace ####
+WORKDIR=$(pwd)
+echo "Working directory => $WORKDIR"
+
 if [ ! -z $INPUT_USERNAME ];
 then echo $INPUT_PASSWORD | docker login $INPUT_REGISTRY -u $INPUT_USERNAME --password-stdin
 fi
@@ -15,11 +19,12 @@ then INPUT_SHELL=sh
 fi
 
 if [ -z $INPUT_IMAGE ];
-then INPUT_IMAGE=cubetiq/calpine-docker-yarn
+then INPUT_IMAGE=cubetiq/calpine-docker-yarn:latest
 fi
 
 if [ -z $semicolon_delimited_script ];
 then semicolon_delimited_script="echo $(whoami)"
 fi
 
-exec docker run -v "/var/run/docker.sock":"/var/run/docker.sock" $INPUT_OPTIONS --entrypoint=$INPUT_SHELL $INPUT_IMAGE -c "`cat semicolon_delimited_script`"
+exec $INPUT_SHELL semicolon_delimited_script
+# exec docker run --workdir $WORKDIR -v "$WORKDIR":"$WORKDIR" -v "/var/run/docker.sock":"/var/run/docker.sock" $INPUT_OPTIONS --entrypoint=$INPUT_SHELL $INPUT_IMAGE -c "`cat semicolon_delimited_script`"
