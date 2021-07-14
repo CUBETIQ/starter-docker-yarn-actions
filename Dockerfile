@@ -2,7 +2,7 @@ FROM cubetiq/calpine-docker:latest
 LABEL maintainer="sombochea@cubetiqs.com"
 
 # Build with root access
-# USER root
+USER root
 
 ENV NODE_VERSION 14.16.0
 ENV USER_UID 1001
